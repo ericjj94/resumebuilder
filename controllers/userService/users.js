@@ -1,8 +1,10 @@
 
+
+
 function getPdf(req,response) {
     const fs = require('fs');
     const pdf = require('html-pdf');
-    var htmlString = fs.readFileSync('C:\\Users\\Eric\\Desktop\\E-commerce\\backend\\assets\\index.html', 'utf8');
+    var htmlString = fs.readFileSync('C:\\Users\\Eric\\Desktop\\cv-builder\\backend\\assets\\index.html', 'utf8');
 
     const options = { format: 'Letter' };
     pdf.create(htmlString, options).toFile('./resume.pdf', (err,res) => {
